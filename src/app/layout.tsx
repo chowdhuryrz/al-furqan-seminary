@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
+import { Nunito, Quicksand } from "next/font/google";
 import "./globals.css";
 
-const ibmPlexSans = IBM_Plex_Sans({
-  variable: "--font-ibm-sans",
+const nunito = Nunito({
+  variable: "--font-primary",
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const ibmPlexSerif = IBM_Plex_Serif({
-  variable: "--font-ibm-serif",
-  weight: ["400", "500", "600"],
+const quicksand = Quicksand({
+  variable: "--font-heading",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -28,9 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${ibmPlexSans.variable} ${ibmPlexSerif.variable} antialiased`}
-      >
+      <body className={`${nunito.variable} ${quicksand.variable} antialiased`}>
         {children}
       </body>
     </html>

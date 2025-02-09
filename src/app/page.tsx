@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-4">
+    <div className="flex flex-col items-center justify-center h-screen gap-4 text-center">
       <h1 className="text-4xl font-bold">Welcome to Al Furqan Seminary!</h1>
       <div className="flex gap-4">
         <Link href="/dashboard">

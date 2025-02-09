@@ -13,8 +13,8 @@
     --popover: 0 0% 9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 357 90% 44%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 151 98% 69%; /* Changed to mint green */
+    --primary-foreground: 0 0% 7%; /* Dark background for contrast */
 
     --secondary: 0 0% 11%;
     --secondary-foreground: 0 0% 98%;
@@ -22,11 +22,11 @@
     --muted: 0 0% 12%;
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 357 90% 44%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 151 98% 69%; /* Changed to mint green */
+    --accent-foreground: 0 0% 7%; /* Dark background for contrast */
 
-    --success: 142 76% 45%;
-    --success-foreground: 0 0% 98%;
+    --success: 151 98% 69%; /* Changed to mint green */
+    --success-foreground: 0 0% 7%;
     --warning: 38 95% 64%;
     --warning-foreground: 0 0% 9%;
     --destructive: 357 90% 44%;
@@ -34,18 +34,37 @@
 
     --border: 0 0% 14.9%;
     --input: 0 0% 14.9%;
-    --ring: 357 90% 44%;
+    --ring: 151 98% 69%; /* Changed to mint green */
 
-    --chart-1: 357 90% 44%; /* Primary red */
-    --chart-2: 142 76% 45%; /* Success green */
+    --chart-1: 151 98% 69%; /* Primary mint green */
+    --chart-2: 357 90% 44%; /* Previous primary red */
     --chart-3: 38 95% 64%; /* Warning yellow */
     --chart-4: 316 94% 68%; /* Magenta */
     --chart-5: 270 94% 68%; /* Purple */
 
     --radius: 0.5rem;
 
-    --font-ibm-sans: "IBM Plex Sans", system-ui, sans-serif;
-    --font-ibm-serif: "IBM Plex Serif", Georgia, serif;
+    --font-primary: var(--font-primary), system-ui, sans-serif;
+    --font-heading: var(--font-heading), Georgia, serif;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 151 98% 69%; /* Changed to mint green */
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 151 98% 69%; /* Changed to mint green */
   }
 }
 
@@ -55,9 +74,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-primary);
   }
-
-  body {
-    font-family: var(--font-ibm-sans);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
   }
 }

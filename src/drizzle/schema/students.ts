@@ -6,9 +6,7 @@ export const students = pgTable("students", {
   lastName: text("last_name").notNull(),
   age: integer("age").notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
-  updatedAt: timestamp("updated_at")
-    .notNull()
-    .$onUpdate(() => new Date()),
+  updatedAt: timestamp("updated_at").$onUpdate(() => new Date()),
 });
 
 export type InsertStudent = typeof students.$inferInsert;
