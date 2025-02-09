@@ -1,17 +1,16 @@
-import type { Metadata } from "next";
-import { Nunito, Quicksand } from "next/font/google";
+import { Metadata } from "next";
+import { El_Messiri, Inter } from "next/font/google";
 import "./globals.css";
 
-const nunito = Nunito({
-  variable: "--font-primary",
+const elMessiri = El_Messiri({
+  variable: "--font-el-messiri",
   weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
+  subsets: ["arabic", "latin"],
   display: "swap",
 });
 
-const quicksand = Quicksand({
-  variable: "--font-heading",
-  weight: ["400", "500", "600", "700"],
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
@@ -28,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} ${quicksand.variable} antialiased`}>
+      <body className={`${elMessiri.variable} ${inter.variable} antialiased`}>
         {children}
       </body>
     </html>

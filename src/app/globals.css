@@ -4,67 +4,66 @@
 
 @layer base {
   :root {
-    --background: 0 0% 7%;
-    --foreground: 0 0% 98%;
+    --background: 0 0% 100%;
+    --foreground: 153 15% 15%;
 
-    --card: 0 0% 9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 98%;
+    --card-foreground: 153 15% 15%;
 
-    --popover: 0 0% 9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 153 15% 15%;
 
-    --primary: 151 98% 69%; /* Changed to mint green */
-    --primary-foreground: 0 0% 7%; /* Dark background for contrast */
+    /* Primary - #016B3B */
+    --primary: 153 98% 21%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 11%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary - lighter variant of primary */
+    --secondary: 153 60% 90%;
+    --secondary-foreground: 153 98% 21%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 63.9%;
+    /* Muted - very light green tint */
+    --muted: 153 25% 96%;
+    --muted-foreground: 153 15% 45%;
 
-    --accent: 151 98% 69%; /* Changed to mint green */
-    --accent-foreground: 0 0% 7%; /* Dark background for contrast */
+    /* Accent - darker variant of primary */
+    --accent: 153 98% 16%;
+    --accent-foreground: 0 0% 100%;
 
-    --success: 151 98% 69%; /* Changed to mint green */
-    --success-foreground: 0 0% 7%;
-    --warning: 38 95% 64%;
-    --warning-foreground: 0 0% 9%;
-    --destructive: 357 90% 44%;
-    --destructive-foreground: 0 0% 98%;
+    /* Status colors */
+    --success: 153 98% 21%;
+    --success-foreground: 0 0% 100%;
+    --warning: 39 75% 52%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 357 85% 44%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 151 98% 69%; /* Changed to mint green */
+    /* Borders and inputs */
+    --border: 153 25% 90%;
+    --input: 153 25% 90%;
+    --ring: 153 98% 21%;
 
-    --chart-1: 151 98% 69%; /* Primary mint green */
-    --chart-2: 357 90% 44%; /* Previous primary red */
-    --chart-3: 38 95% 64%; /* Warning yellow */
-    --chart-4: 316 94% 68%; /* Magenta */
-    --chart-5: 270 94% 68%; /* Purple */
+    /* Chart colors */
+    --chart-1: 153 98% 21%; /* Main green */
+    --chart-2: 153 80% 30%; /* Darker green */
+    --chart-3: 153 70% 40%; /* Medium green */
+    --chart-4: 153 60% 50%; /* Light green */
+    --chart-5: 153 50% 60%; /* Lighter green */
+    --chart-6: 153 40% 70%; /* Lightest green */
 
     --radius: 0.5rem;
 
-    --font-primary: var(--font-primary), system-ui, sans-serif;
-    --font-heading: var(--font-heading), Georgia, serif;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+    --font-primary: var(--font-inter), sans-serif;
+    --font-heading: var(--font-el-messiri), sans-serif;
 
-  .dark {
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 151 98% 69%; /* Changed to mint green */
-    --sidebar-primary-foreground: 0 0% 7%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 151 98% 69%; /* Changed to mint green */
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 153 15% 15%;
+    --sidebar-primary: 153 98% 21%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 153 25% 96%;
+    --sidebar-accent-foreground: 153 15% 15%;
+    --sidebar-border: 153 25% 90%;
+    --sidebar-ring: 153 98% 21%;
   }
 }
 
@@ -75,13 +74,5 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-primary);
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: var(--font-heading);
   }
 }

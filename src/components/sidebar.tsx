@@ -12,7 +12,7 @@ const Sidebar = () => {
       <div className="flex flex-col items-center justify-center h-20 border-b border-border">
         <Link href="/" className="text-lg font-bold flex items-center gap-2">
           <Image src="/logo.png" alt="logo" width={32} height={32} />
-          Al Furqan Seminary
+          Al-Furqan Seminary
         </Link>
       </div>
 
