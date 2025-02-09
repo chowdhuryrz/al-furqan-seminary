@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -40,9 +39,7 @@ export function Navbar() {
 
       <Sheet>
         <SheetTrigger asChild>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <MenuIcon className="size-10" />
-          </Button>
+          <MenuIcon className="size-7 md:hidden cursor-pointer" />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader className="flex flex-col mt-10">
@@ -68,7 +65,14 @@ export function Navbar() {
       <ul className="gap-4 hidden md:flex font-bold">
         {navLinks.map((link) => (
           <li key={link.href}>
-            <Link href={link.href}>{link.label}</Link>
+            <Link
+              href={link.href}
+              className={`hover:text-amber-300 transition-colors ${
+                pathname === link.href ? "text-amber-300" : "text-foreground"
+              }`}
+            >
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>

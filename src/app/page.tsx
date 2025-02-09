@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Navbar } from "@/components/navbar";
-import { ContactForm } from "@/components/contact-form";
-import { FeaturesSection } from "@/components/feature-section";
-import Programs from "@/components/programs";
-import Testimonials from "@/components/testimonials";
-import Footer from "@/components/footer";
+import { Navbar } from "@/components/home/navbar";
+import { ContactForm } from "@/components/home/contact-form";
+import { FeaturesSection } from "@/components/home/feature-section";
+import Programs from "@/components/home/programs";
+import Testimonials from "@/components/home/testimonials";
+import Footer from "@/components/home/footer";
 
 export default function Home() {
   return (
