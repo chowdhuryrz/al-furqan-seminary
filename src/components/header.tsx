@@ -1,4 +1,6 @@
+import Link from "next/link";
 import { MenuIcon } from "lucide-react";
+import { usePathname } from "next/navigation";
 import {
   Sheet,
   SheetClose,
@@ -7,8 +9,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { navigationConfig } from "@/config/navigation";
 
 const Header = ({ title }: { title: string }) => {
@@ -19,7 +19,7 @@ const Header = ({ title }: { title: string }) => {
       <h1 className="text-2xl font-bold">{title}</h1>
       <Sheet>
         <SheetTrigger className="md:hidden">
-          <MenuIcon className="w-7 h-7 cursor-pointer" />
+          <MenuIcon className="size-7 cursor-pointer" />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader className="flex flex-col mt-10">
